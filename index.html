@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Excuse Generator</title>
+</head>
+<body>
+  <H1>The Excuse Generator</H1>
+  <h2>Disneyland for procrastinators and lazy people</h2> 
+  
+  <p id="excuse">My dog ate my homework</p>
+
+<script>
+    let who = ['The dog','My grandma','His turtle','My bird'];
+     let whox = Math.abs(Math.round((Math.random()) * who.length)-1);
+    
+    let action = ['ate','peed','crushed','broke'];
+     let actionx = Math.abs(Math.round((Math.random()) * action.length)-1);
+    
+    let what = ['my homework', 'the keys', 'the car'];
+     let whatx = Math.abs(Math.round((Math.random()) * what.length)-1);
+    
+    let when = ['before the class','right on time','when I finished','during my lunch','while I was praying'];
+     let whenx = Math.abs(Math.round((Math.random()) * when.length)-1);
+    
+     let spc = " ";
+
+    var excusa_completa = who[whox] + spc + action[actionx] + spc + what[whatx] + spc + when[whenx];
+    document.getElementById("excuse").innerHTML = excusa_completa;
+    setTimeout(function(){
+        window.location.reload(1);
+    }, 2000);
+    
+</script>
+
+</body>
+</html>
